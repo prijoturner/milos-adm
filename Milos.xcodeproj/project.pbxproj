@@ -12,9 +12,11 @@
 		31FCA894213790BD000F0D24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31FCA892213790BD000F0D24 /* Main.storyboard */; };
 		31FCA896213790BE000F0D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31FCA895213790BE000F0D24 /* Assets.xcassets */; };
 		31FCA899213790BE000F0D24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31FCA897213790BE000F0D24 /* LaunchScreen.storyboard */; };
+		5C3736D24174DFF4A7200E34 /* Pods_Milos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E036790D4DF3A91A95C3C4 /* Pods_Milos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		092649F3C506176E0C7886ED /* Pods-Milos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Milos/Pods-Milos.debug.xcconfig"; sourceTree = "<group>"; };
 		31FCA88B213790BD000F0D24 /* Milos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Milos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31FCA88E213790BD000F0D24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31FCA890213790BD000F0D24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		31FCA895213790BE000F0D24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31FCA898213790BE000F0D24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31FCA89A213790BE000F0D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97E036790D4DF3A91A95C3C4 /* Pods_Milos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Milos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6DD00A5460FC10043A9AEF7 /* Pods-Milos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Milos/Pods-Milos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C3736D24174DFF4A7200E34 /* Pods_Milos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				31FCA88D213790BD000F0D24 /* Milos */,
 				31FCA88C213790BD000F0D24 /* Products */,
+				F9B1ECED7D7E409BC65643F4 /* Pods */,
+				40FD3D3D936463CFF8560D65 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Milos;
 			sourceTree = "<group>";
 		};
+		40FD3D3D936463CFF8560D65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97E036790D4DF3A91A95C3C4 /* Pods_Milos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9B1ECED7D7E409BC65643F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				092649F3C506176E0C7886ED /* Pods-Milos.debug.xcconfig */,
+				E6DD00A5460FC10043A9AEF7 /* Pods-Milos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31FCA89D213790BE000F0D24 /* Build configuration list for PBXNativeTarget "Milos" */;
 			buildPhases = (
+				08C8FC32CEEFCCA24DC9493D /* [CP] Check Pods Manifest.lock */,
 				31FCA887213790BD000F0D24 /* Sources */,
 				31FCA888213790BD000F0D24 /* Frameworks */,
 				31FCA889213790BD000F0D24 /* Resources */,
+				20E43D7B015A32F8CF93FFB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08C8FC32CEEFCCA24DC9493D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Milos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20E43D7B015A32F8CF93FFB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Milos/Pods-Milos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DTTextField/DTTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldFloatingPlaceholder/TextFieldFloatingPlaceholder.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldFloatingPlaceholder.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Milos/Pods-Milos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31FCA887213790BD000F0D24 /* Sources */ = {
@@ -278,14 +347,12 @@
 		};
 		31FCA89E213790BE000F0D24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 092649F3C506176E0C7886ED /* Pods-Milos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Milos/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elektra.Milos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -295,14 +362,12 @@
 		};
 		31FCA89F213790BE000F0D24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6DD00A5460FC10043A9AEF7 /* Pods-Milos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Milos/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elektra.Milos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
