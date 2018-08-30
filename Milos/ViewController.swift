@@ -10,6 +10,19 @@ import UIKit
 import DTTextField
 import AVFoundation
 
+extension UITextField {
+    func setBottomBorder() {
+        self.borderStyle = .none
+        self.layer.backgroundColor = UIColor.white.cgColor
+        
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0.0
+    }
+}
+
 class ViewController: UIViewController, UITextFieldDelegate, AVCaptureMetadataOutputObjectsDelegate {
     
     @IBOutlet weak var nameTextField: DTTextField!
@@ -28,6 +41,11 @@ class ViewController: UIViewController, UITextFieldDelegate, AVCaptureMetadataOu
         kekalTextField.canShowBorder = false
         addressTextField.canShowBorder = false
         statusTextField.canShowBorder = false
+        
+        nameTextField.setBottomBorder()
+        kekalTextField.setBottomBorder()
+        addressTextField.setBottomBorder()
+        statusTextField.setBottomBorder()
         
         // Get the back-facing camera for capturing videos
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
@@ -73,6 +91,11 @@ class ViewController: UIViewController, UITextFieldDelegate, AVCaptureMetadataOu
             kekalTextField.becomeFirstResponder()
         } else if textField == kekalTextField {
             textField.resignFirstResponder()
+        } else if textField == addressTextField {
+            textField.resignFirstResponder()
+            statusTextField.becomeFirstResponder()
+        } else {
+            resignFirstResponder()
         }
         return true
     }
